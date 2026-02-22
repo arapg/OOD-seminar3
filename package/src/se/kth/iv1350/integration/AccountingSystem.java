@@ -1,7 +1,6 @@
-// src/se/kth/iv1350/pos/integration/AccountingSystem.java
-package integration;
+package se.kth.iv1350.integration;
 
-import model.Sale;
+import se.kth.iv1350.model.Sale;
 
 /**
  * Handles communication with an external accounting system (simulated).

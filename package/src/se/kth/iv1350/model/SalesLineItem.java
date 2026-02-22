@@ -1,7 +1,7 @@
-package model;
+package se.kth.iv1350.model;
 
-import util.Amount;
-import dto.ItemDTO;
+import se.kth.iv1350.util.Amount;
+import se.kth.iv1350.dto.ItemDTO;
 
 /**
  * Represents a line item in a sale, consisting of an item and its quantity.

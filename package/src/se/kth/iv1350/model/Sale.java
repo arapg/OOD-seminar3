@@ -1,11 +1,11 @@
-package model;
+package se.kth.iv1350.model;
 
-import dto.ItemDTO;
-import dto.SaleStateDTO;
+import se.kth.iv1350.dto.ItemDTO;
+import se.kth.iv1350.dto.SaleStateDTO;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import util.Amount;
+import se.kth.iv1350.util.Amount;
 
 /**
  * Represents a single sale transaction.

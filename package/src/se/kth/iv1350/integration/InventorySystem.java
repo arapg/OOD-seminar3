@@ -1,9 +1,8 @@
+package se.kth.iv1350.integration;
 
-package integration;
-
-import util.Amount;
-import dto.ItemDTO;
-import model.Sale;
+import se.kth.iv1350.util.Amount;
+import se.kth.iv1350.dto.ItemDTO;
+import se.kth.iv1350.model.Sale;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,6 +31,7 @@ public class InventorySystem {
 
     /**
      * Retrieves item information based on its ID.
+     * 
      * @param itemID The ID of the item to retrieve.
      * @return The {@link ItemDTO} if found, otherwise null.
      */
@@ -42,13 +42,13 @@ public class InventorySystem {
     /**
      * Updates the inventory system after a sale is completed.
      * (Currently a placeholder).
+     * 
      * @param sale The completed sale information.
      */
     public void updateInventory(Sale sale) {
         // In a real system, this would decrement stock levels
         System.out.println("LOG: Inventory system notified of sale. Items sold:");
-        sale.getItems().forEach(itemLine -> 
-            System.out.println("LOG: - " + itemLine.getItem().getName() + ", Qty: " + itemLine.getQuantity())
-        );
+        sale.getItems().forEach(itemLine -> System.out
+                .println("LOG: - " + itemLine.getItem().getName() + ", Qty: " + itemLine.getQuantity()));
     }
 }

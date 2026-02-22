@@ -1,9 +1,9 @@
-package model;
+package se.kth.iv1350.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import util.Amount;
+import se.kth.iv1350.util.Amount;
 
 /**
  * Represents a receipt for a completed sale.

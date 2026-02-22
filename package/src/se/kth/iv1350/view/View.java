@@ -1,10 +1,9 @@
-// src/se/kth/iv1350/pos/view/View.java
-package view;
+package se.kth.iv1350.view;
 
-import controller.Controller;
-import dto.*;
+import se.kth.iv1350.controller.Controller;
+import se.kth.iv1350.dto.*;
 import java.util.Scanner;
-import util.Amount;
+import se.kth.iv1350.util.Amount;
 
 /**
  * Represents the user interface of the application.
@@ -15,13 +14,13 @@ public class View {
 
     /**
      * Creates a new View instance.
+     * 
      * @param contr The controller to use for all operations.
      */
     public View(Controller contr) {
         this.contr = contr;
         this.inputScanner = new Scanner(System.in);
     }
-
 
     /**
      * Starts the sale, allowing the user to input item IDs and quantities.
@@ -41,7 +40,7 @@ public class View {
 
             int quantity = 0;
             boolean validQuantity = false;
-            while(!validQuantity) {
+            while (!validQuantity) {
                 System.out.print("Enter quantity for item '" + itemID + "': ");
                 String quantityStr = inputScanner.nextLine().trim();
                 try {
@@ -55,7 +54,6 @@ public class View {
                     System.out.println("Invalid quantity format. Please enter a number.");
                 }
             }
-
 
             SaleStateDTO saleState = contr.enterItem(itemID, quantity);
             if (saleState != null) {
@@ -80,12 +78,12 @@ public class View {
         System.out.println("------------------------------------");
         double amountPaidValue = 0;
         boolean validPayment = false;
-        while(!validPayment) {
+        while (!validPayment) {
             System.out.print("Enter amount paid by customer: ");
             String amountPaidStr = inputScanner.nextLine().trim();
             try {
                 amountPaidValue = Double.parseDouble(amountPaidStr);
-                if(amountPaidValue >= 0) {
+                if (amountPaidValue >= 0) {
                     validPayment = true;
                 } else {
                     System.out.println("Payment amount cannot be negative.");
@@ -99,7 +97,8 @@ public class View {
         System.out.println("Customer pays: " + amountPaid);
 
         Amount change = contr.enterPayment(amountPaid);
-        // The receipt is printed by the Printer class, called from Controller.enterPayment
+        // The receipt is printed by the Printer class, called from
+        // Controller.enterPayment
 
         if (change != null) {
             System.out.println("Change to give the customer: " + change);
@@ -115,10 +114,10 @@ public class View {
         ItemDTO item = saleState.getLastAddedItem();
         System.out.println("Last Item: " + item.getName() + " (ID: " + item.getItemID() + ")");
         System.out.println("  Cost: " + item.getPrice());
-        System.out.println("  VAT: " + (int)(item.getVatRate() * 100) + "%");
+        System.out.println("  VAT: " + (int) (item.getVatRate() * 100) + "%");
         System.out.println("  Description: " + item.getDescription());
         System.out.println("Running Total (incl VAT): " + saleState.getRunningTotalIncludingVAT());
         System.out.println("Current Total VAT: " + saleState.getCurrentTotalVAT());
-        System.out.println(); 
+        System.out.println();
     }
 }

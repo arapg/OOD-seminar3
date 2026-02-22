@@ -1,6 +1,6 @@
-package model;
+package se.kth.iv1350.model;
 
-import util.Amount;
+import se.kth.iv1350.util.Amount;
 
 /**
  * Represents the cash register in the store.

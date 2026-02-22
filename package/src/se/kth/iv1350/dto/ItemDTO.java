@@ -1,5 +1,5 @@
-package dto;
-import util.Amount;
+package se.kth.iv1350.dto;
+import se.kth.iv1350.util.Amount;
 
 /**
  * Represents an item's data. This is a Data Transfer Object.

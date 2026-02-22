@@ -1,6 +1,6 @@
-package integration;
+package se.kth.iv1350.integration;
 
-import model.Receipt;
+import se.kth.iv1350.model.Receipt;
 
 /**
  * Handles printing operations (simulated by printing to System.out).

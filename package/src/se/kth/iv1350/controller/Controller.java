@@ -1,10 +1,9 @@
-// src/se/kth/iv1350/pos/controller/Controller.java
-package controller;
+package se.kth.iv1350.controller;
 
-import util.Amount;
-import dto.*;
-import integration.*;
-import model.*;
+import se.kth.iv1350.util.Amount;
+import se.kth.iv1350.dto.*;
+import se.kth.iv1350.integration.*;
+import se.kth.iv1350.model.*;
 
 
 /**

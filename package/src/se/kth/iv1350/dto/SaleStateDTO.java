@@ -1,5 +1,5 @@
-package dto;
-import util.Amount;
+package se.kth.iv1350.dto;
+import se.kth.iv1350.util.Amount;
 
 /**
  * Represents the current state of a sale, typically returned after adding an item.

@@ -1,4 +1,4 @@
-package integration;
+package se.kth.iv1350.integration;
 
 /**
  * Handles communication with an external discount database (simulated).

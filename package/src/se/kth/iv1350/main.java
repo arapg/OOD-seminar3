@@ -1,7 +1,9 @@
-import controller.Controller;
-import integration.*;
-import model.Register;
-import view.View;
+package se.kth.iv1350;
+
+import se.kth.iv1350.controller.Controller;
+import se.kth.iv1350.integration.*;
+import se.kth.iv1350.model.Register;
+import se.kth.iv1350.view.View;
 
 /**
  * Starts the entire application, contains the main method used to start the application.

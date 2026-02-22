@@ -1,4 +1,4 @@
-package util;
+package se.kth.iv1350.util;
 
 import java.util.Objects;
 
